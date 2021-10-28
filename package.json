@@ -1,0 +1,80 @@
+{
+  "name": "blitz-app",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tundera/monorepo"
+  },
+  "author": {
+    "name": "Philip Johnston",
+    "email": "tunderadev@gmail.com",
+    "url": "https://github.com/tundera"
+  },
+  "license": "MIT",
+  "packageManager": "yarn@3.1.0",
+  "scripts": {
+    "dev": "blitz dev",
+    "build": "blitz build",
+    "start": "blitz start",
+    "studio": "blitz prisma studio",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "postinstall": "husky install",
+    "commit": "cz"
+  },
+  "prisma": {
+    "schema": "db/schema.prisma"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-emoji"
+    }
+  },
+  "dependencies": {
+    "@chakra-ui/react": "1.1.2",
+    "@emotion/react": "11.1.4",
+    "@emotion/styled": "11.0.0",
+    "@hookform/resolvers": "2.8.2",
+    "@prisma/client": "3.3.0",
+    "blitz": "0.41.1",
+    "cloudinary-build-url": "0.2.1",
+    "framer-motion": "3.2.0",
+    "react": "alpha",
+    "react-dom": "alpha",
+    "react-hook-form": "7.17.5",
+    "zod": "3.10.3"
+  },
+  "devDependencies": {
+    "@types/node": "16.11.2",
+    "@types/preview-email": "2.0.1",
+    "@types/react": "17.0.31",
+    "@types/react-dom": "17.0.10",
+    "commitizen": "4.2.4",
+    "cz-emoji": "1.3.1",
+    "eslint": "7.32.0",
+    "husky": "6.0.0",
+    "lint-staged": "10.5.4",
+    "nba": "4.15.0",
+    "prettier": "2.4.1",
+    "prettier-plugin-prisma": "0.15.0",
+    "pretty-quick": "3.1.1",
+    "preview-email": "3.0.5",
+    "prisma": "3.3.0",
+    "tasuku": "1.0.2",
+    "ts-node": "10.3.1",
+    "tsconfig-paths": "3.11.0",
+    "typescript": "4.4.4",
+    "universal-dotenv": "3.2.6"
+  }
+}
